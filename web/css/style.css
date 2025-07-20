@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@layer base {
+    body {
+        @apply bg-neutral-900 text-neutral-100;
+    }
+
+    .apply-grad {
+        @apply bg-gradient-to-b from-blue-600/90 via-violet-900/80 to-teal-800/100;
+    }
+}
+
+@source "../index.html";
+

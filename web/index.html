@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get your prediction</title>
+    <link rel="stylesheet" href="./css/final.css">
+    <link rel="shortcut icon" href="./logo2.png" type="image/x-icon">
+</head>
+<body>
+    <main class="max-w-screen-2xl mx-auto">
+        <section class="p-4 sm:p-8 md:p-12">
+            <div class="flex gap-x-4">
+                <!-- The canvas where u can draw and heading -->
+                <div class="inline-flex flex-col gap-y-4">
+                    <h1 class="text-xl font-bold">Draw a number on the canvas</h1>
+                    <canvas class="border" id="myCanvas"></canvas>
+                    <div class="flex gap-x-2">
+                        <button id="clearCanvasBtn" class="cursor-pointer capitalize rounded px-4 py-2 font-semibold bg-teal-500 hover:bg-teal-500/70 transition-all duration-200">
+                            clear canvas
+                        </button>
+                        <button id="predictBtn" class="cursor-pointer capitalize rounded px-4 py-2 font-semibold bg-yellow-600 hover:bg-yellow-600/70 transition-all duration-200">
+                            predict
+                        </button>
+                    </div>
+                    <div class="flex gap-2">
+                        <label for="cnnModel" class="text-sm tracking-tighter font-semibold">Switch to beast mode 🔥🔥 (cNN)</label>
+                        <input id="cnnModel" type="checkbox" class="appearance-none w-14 h-6 rounded-full bg-slate-500 duration-500
+                        before:content-[''] before:absolute before:size-6 before:bg-white before:rounded-full
+                        before:scale-110 checked:before:translate-x-8 checked:bg-blue-600 before:duration-300" />
+                    </div>
+                </div>
+
+                <!-- prediction panel -->
+                <div id="prediction-Container"
+                     class="border basis-full flex py-8 px-4 bg-cover bg-center object-cover relative">
+                    <div id="imgGradient" class="absolute inset-0"></div>
+                    <div class="border-b self-end w-full h-full z-10 flex gap-x-1 justify-evenly">
+                        <div class="flex justify-end flex-col">
+                            <div id="prediction-0" class="w-8 bg-amber-600 predictionBar transition-all duration-500 ease-out"></div>
+                            <span class="text-center font-bold">0</span>
+                        </div>
+
+                        <div class="flex justify-end flex-col">
+                            <div id="prediction-1" class="w-8 bg-amber-600 predictionBar transition-all duration-500 ease-out"></div>
+                            <span class="text-center font-bold">1</span>
+                        </div>
+
+                        <div class="flex justify-end flex-col">
+                            <div id="prediction-2" class="w-8 bg-amber-600 predictionBar transition-all duration-500 ease-out"></div>
+                            <span class="text-center font-bold">2</span>
+                        </div>
+
+                        <div class="flex justify-end flex-col">
+                            <div id="prediction-3" class="w-8 bg-amber-600 predictionBar transition-all duration-500 ease-out"></div>
+                            <span class="text-center font-bold">3</span>
+                        </div>
+
+                        <div class="flex justify-end flex-col">
+                            <div id="prediction-4" class="w-8 bg-amber-600 predictionBar transition-all duration-500 ease-out"></div>
+                            <span class="text-center font-bold">4</span>
+                        </div>
+
+                        <div class="flex justify-end flex-col">
+                            <div id="prediction-5" class="w-8 bg-amber-600 predictionBar transition-all duration-500 ease-out"></div>
+                            <span class="text-center font-bold">5</span>
+                        </div>
+
+                        <div class="flex justify-end flex-col">
+                            <div id="prediction-6" class="w-8 bg-amber-600 predictionBar transition-all duration-500 ease-out"></div>
+                            <span class="text-center font-bold">6</span>
+                        </div>
+
+                        <div class="flex justify-end flex-col">
+                            <div id="prediction-7" class="w-8 bg-amber-600 predictionBar transition-all duration-500 ease-out"></div>
+                            <span class="text-center font-bold">7</span>
+                        </div>
+
+                        <div class="flex justify-end flex-col">
+                            <div id="prediction-8" class="w-8 bg-amber-600 predictionBar transition-all duration-500 ease-out"></div>
+                            <span class="text-center font-bold">8</span>
+                        </div>
+
+                        <div class="flex justify-end flex-col">
+                            <div id="prediction-9" class="w-8 bg-amber-600 predictionBar transition-all duration-500 ease-out"></div>
+                            <span class="text-center font-bold">9</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="p-4 sm:p-8">
+            <h2 class="text-5xl font-bold uppercase text-center" id="cnnStatus">Neural Net</h2>
+        </section>
+
+    </main>
+
+    <script src="./main.js" type="module"></script>
+    <script type="text/javascript" src="./eel.js"></script>
+</body>
+</html>
